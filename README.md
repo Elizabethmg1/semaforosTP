@@ -10,7 +10,7 @@
 
 
 
-   Este trabajo práctico trata sobre la resolución de una consigna en la cual se debe desarrollar un programa en lenguaje C que debe contener una competencia en la que 4 equipos tienen que hacer un sanguche cada uno, para coordinar los pasos y el uso de las herramientas de cocina se deben implementar semáforos los cuáles deben ser ubicados estratégicamente. En primer lugar se presenta el enunciado del trabajo práctico, luego el pseudocodigo que es la base sobre la cual se organizaron los semáforos y a continuación se explica paso por paso las partes del cádigo, se listan los problemas al desarrollar el trabajo práctico y soluciones, y por último se desarrola una conclusión sobre el trabajo realizado.
+   Este trabajo práctico trata sobre la resolución de una consigna en la cual se debe desarrollar un programa en lenguaje C que debe contener una competencia en la que 4 equipos tienen que hacer un sanguche cada uno, para coordinar los pasos y el uso de las herramientas de cocina se deben implementar semáforos los cuáles deben ser ubicados estratégicamente. En primer lugar se presenta el enunciado del trabajo práctico, luego el pseudocódigo que es la base sobre la cual se organizaron los semáforos y a continuación se explica paso por paso las partes del cádigo, se listan los problemas al desarrollar el trabajo práctico y soluciones, y por último se desarrola una conclusión sobre el trabajo realizado.
 
 En primer lugar, el enunciado del trabajo práctico:
 
@@ -64,7 +64,7 @@ tareas.
 formato.
 * 10. Utilizar template brindado por los docentes (github),
 
-El pseudocodigo utilizado para la implementación de semaforos:
+El pseudocódigo utilizado para la implementación de semóforos:
 ```
 Semaforos globales:
 Sem_salero      =1
@@ -137,5 +137,4 @@ Problemas encontrados al realizar el trabajo práctico:
 * En general los problemas relacionados con la sintaxis propia del lenguaje C fueron solucionados buscando informacion y ejemplos relacionados en internet y leyendo la documentación otorgada como el libro de C de Ritchie Kernighan.
 
 Conclusión:
-     Este trabajo práctico es una buena práctica para practicar y aprender la sintaxis del lenguaje C y sus particularides, entender como funcionan los semáforos y como aplicarlos en un lenguaje a partir de una base en pseudocódigo. También es una forma útil de habituarse a buscar métodos y formas de solucionar problemas en cualquier lenguaje de programación.
-
+     Este trabajo práctico es una buena práctica para practicar y aprender la sintaxis del lenguaje C y sus particularidades, entender como funcionan los semáforos y como aplicarlos en lenguaje C a partir de una base en pseudocódigo. También es una forma útil de habituarse a buscar métodos y formas de solucionar problemas en cualquier lenguaje de programación.
