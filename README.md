@@ -10,9 +10,61 @@
 
 
 
-Este trabajo práctico trata sobre la resolución de una consigna en la cual se debe desarrollar un programa en lenguaje C que debe contener una competencia en la que 4 equipos tienen que hacer un sanguche cada uno, para coordinar los pasos y el uso de las herramientas de cocina se deben implementar semáforos los cuáles deben ser ubicados estratégicamente. En primer lugar se presenta el pseudocodigo que es la base sobre la cual se organizaron los semáforos y luego se explica paso por paso las partes del cádigo, se listan los problemas al desarrollar el trabajo práctico y soluciones, y por último se desarrola una conclusión sobre el trabajo realizado.
+   Este trabajo práctico trata sobre la resolución de una consigna en la cual se debe desarrollar un programa en lenguaje C que debe contener una competencia en la que 4 equipos tienen que hacer un sanguche cada uno, para coordinar los pasos y el uso de las herramientas de cocina se deben implementar semáforos los cuáles deben ser ubicados estratégicamente. En primer lugar se presenta el enunciado del trabajo práctico, luego el pseudocodigo que es la base sobre la cual se organizaron los semáforos y a continuación se explica paso por paso las partes del cádigo, se listan los problemas al desarrollar el trabajo práctico y soluciones, y por último se desarrola una conclusión sobre el trabajo realizado.
 
-En primer lugar, el pseudocodigo utilizado para la implementación de semaforos:
+En primer lugar, el enunciado del trabajo práctico:
+
+_Ejercicio Subway Argento_
+   En la cocina de Subway Argento compiten cuatro equipos de cocineros
+para ganarse el puesto de trabajo en el local. ¿Quién será el primero en
+entregar 1 sándwich de milanesa terminado, de 15 cm, al dueño del
+local?
+La dificultad de la competencia es que la cocina no cuenta con el
+equipamiento individual para cada equipo, sino que algunos de ellos son
+compartidos. Se tienen que ordenar para cocinar las milanesas ya que
+solo tienen un sartén para todos los equipos y este cocina una milanesa
+a la vez, existe solo un horno que cocina dos panes a la vez y un solo
+salero.
+
+_¿Cómo se arma un sándwich de milanesa?_
+   Para armar un sándwich necesito cortar 2 dientes de ajo y
+un puñado de perejil, para luego mezclarlos con 1 huevo.
+Después utilizar sal a gusto, agregar la carne y luego empanar
+las milanesas. Una vez que tengo todo armado se cocinan por 5’
+en el sartén bien caliente.
+Como corresponde una buena milanesa tiene panes recién
+horneados (por 10’ aproximadamente) junto a lechuga fresca,
+tomate, cebolla morada y pepino recién cortados.
+Finalmente puedo armar el sándwich con todos los ingredientes.
+
+_Consideraciones:_
+* Se debe respetar el orden de la receta, por eso para armar las milanesas necesitamos cortar el ajo
+y el perejil para luego mezclarlos con el huevo.
+* La ejecución no puede ser secuencial, cada equipo comienza al mismo instante y van realizando
+las tareas concurrentemente.
+* Dos equipos no pueden estar horneando, usando el sartén o usando el salero a la vez.
+* Algunas de las tareas se pueden paralelizar.
+
+_Se solicita:_
+* 1. Leer la receta desde un archivo. La definición de este archivo debe ser en base a la receta y queda
+libre a la consideración de cada equipo.
+* 2. Utilizar 4 hilos (threads) para simular los cuatros equipos.
+* 3. La salida (log) de competencia debe escribirse en un archivo, aclaración: cada acción/paso de la
+receta deben simularla con un salida de texto.
+Ejemplo: ¡Equipo 1 Horneando panes!, ¡Equipo 2, El pan está listo!, ¡Equipo 3 término la milanesa!
+¡Equipo 3 Gano!
+* 4. Controlar la utilización del equipamiento compartido ya que lo puede utilizar un equipo a la vez.
+* 5. Simular unos segundos con la función usleep() la realización de cada tarea.
+* 6. Cuando escriban en el archivo la salida debe ser ordenada para que se entienda las tareas que
+realizó cada equipo.
+* 7. Realizar una prueba de escritorio en pseudocódigo mostrando cómo se sincronizan las
+tareas.
+* 8. Realizar un programa en C con la simulación de la competencia.
+* 9. El informe del trabajo debe estar escrito en el archivo Readme.md suma puntos si se utiliza
+formato.
+* 10. Utilizar template brindado por los docentes (github),
+
+El pseudocodigo utilizado para la implementación de semaforos:
 ```
 Semaforos globales:
 Sem_salero      =1
@@ -44,6 +96,8 @@ V(sem_sarten)	     V(sem_horno)
 V(sem_milaLista)   V(sem_panListo)
 
 ```
+Para hacer este pseudocódigo se tuvo en cuenta que el orden de los pasos no debian ser secuenciales, y que habian pasos que no necesitaban de otro para ejecutarse por lo cual se puso sus semáforos en 1 al comenzar la ejecucion, como en el caso de cortar el ajo y perejil, cortar la lechuga,tomate y perejil y hornear. Luego los pasos de mezclar, salar, empanar y fritar si dependian de que otros pasos fueran ejecutados, por eso sus semáforos estan inicializados en 0.
+
 Prueba de escritorio de un solo equipo, con el orden de los procesos que se fueron ejecutando:
 ```
 Sem_salero      =1 1 1 0 1 1 1
@@ -83,5 +137,5 @@ Problemas encontrados al realizar el trabajo práctico:
 * En general los problemas relacionados con la sintaxis propia del lenguaje C fueron solucionados buscando informacion y ejemplos relacionados en internet y leyendo la documentación otorgada como el libro de C de Ritchie Kernighan.
 
 Conclusión:
-Este trabajo práctico es una buena práctica para practica y aprender la sintaxis del lenguaje C y sus particularides, entender como funcionan los semáforos y como aplicarlos en un lenguaje a partir de una base en pseudocódigo. También es una forma útil de habituarse a buscar métodos y formas de solucionar problemas en cualquier lenguaje de programación.
+     Este trabajo práctico es una buena práctica para practicar y aprender la sintaxis del lenguaje C y sus particularides, entender como funcionan los semáforos y como aplicarlos en un lenguaje a partir de una base en pseudocódigo. También es una forma útil de habituarse a buscar métodos y formas de solucionar problemas en cualquier lenguaje de programación.
 
