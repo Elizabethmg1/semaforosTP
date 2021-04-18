@@ -10,7 +10,7 @@
 
 
 
-   Este trabajo práctico trata sobre la resolución de una consigna en la cual se debe desarrollar un programa en lenguaje C que debe contener una competencia en la que 4 equipos tienen que hacer un sanguche cada uno, para coordinar los pasos y el uso de las herramientas de cocina se deben implementar semáforos los cuáles deben ser ubicados estratégicamente. En primer lugar se presenta el enunciado del trabajo práctico, luego el pseudocódigo que es la base sobre la cual se organizaron los semáforos y a continuación se explica paso por paso las partes del cádigo, se listan los problemas al desarrollar el trabajo práctico y soluciones, y por último se desarrola una conclusión sobre el trabajo realizado.
+   Este trabajo práctico trata sobre la resolución de una consigna en la cual se debe desarrollar un programa en lenguaje C que debe contener una competencia en la que 4 equipos tienen que hacer un sanguche cada uno y ver cual es el primero en terminarlo, para coordinar los pasos y el uso de las herramientas de cocina se deben implementar semáforos los cuáles deben ser ubicados estratégicamente. En primer lugar se presenta el enunciado del trabajo práctico, luego el pseudocódigo que es la base sobre la cual se organizaron los semáforos y a continuación se explica paso por paso las partes del código, se listan los problemas al desarrollar el trabajo práctico y soluciones, y por último se desarrola una conclusión sobre el trabajo realizado.
 
 En primer lugar, el enunciado del trabajo práctico:
 
@@ -130,11 +130,12 @@ En segundo lugar se organizó y completó el código brindado para que pueda cum
 * 6.En la función _main()_ se crean los nombres de los equipos guardando espacio para su valor, se crean las variables hilos de cada equipo, se inicializan los semáforos compartidos por todos los equipos con la receta a ejecutar y su nombre de equipo, luego de ejecutarse por completo la función otorgada como parametro a cada hilo se hace un join de todos los hilos y se los finaliza.
 
 Problemas encontrados al realizar el trabajo práctico:
-* La asignación de valor en C produce aliassing por lo cual dio dificultad al utilizar el método _strtok()_.
+* La asignación de valor en C produce _aliassing_ por lo cual dio dificultad al utilizar el método _strtok()_.
 * Al utilizar métodos referidos a semáforos en C debia pasar como parámetro el puntero hacia el semáforo declarado.
 * Al formular el código para dividir el contenido de la receta del archivo de texto con el método _strtok()_ para dividirlo por el delimitador y luego en un bucle interno dividir ese mismo token en otros token, dio el problema de que no era posible ejecutarse el _while_ externo lo que significa que este método no puede ser usado concurrentemente, y este problema fue solucionado haciendo las dos divisiones de token por separado utilizando cadenas de texto auxiliares.
 * En el momento que fueron declarados los semáforos compartidos por todos equipos estos no eran considerados como inicializados por las funciones y fue solucionado declarando dichos semaforos en la parte superior del código.
-* En general los problemas relacionados con la sintaxis propia del lenguaje C fueron solucionados buscando informacion y ejemplos relacionados en internet y leyendo la documentación otorgada como el libro de C de Ritchie Kernighan.
+* En general los problemas relacionados con la sintáxis propia del lenguaje C fueron solucionados buscando información y ejemplos relacionados en internet y leyendo la documentación otorgada como el libro de C de Ritchie Kernighan.
 
 Conclusión:
-     Este trabajo práctico es una buena práctica para practicar y aprender la sintaxis del lenguaje C y sus particularidades, entender como funcionan los semáforos y como aplicarlos en lenguaje C a partir de una base en pseudocódigo. También es una forma útil de habituarse a buscar métodos y formas de solucionar problemas en cualquier lenguaje de programación.
+
+   Este trabajo práctico es una buena práctica para practicar y aprender la sintáxis del lenguaje C y sus particularidades, entender como funcionan los semáforos y como aplicarlos en lenguaje C a partir de una base en pseudocódigo. También es una forma útil de habituarse a buscar métodos y formas de solucionar problemas en cualquier lenguaje de programación.
