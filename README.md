@@ -139,3 +139,15 @@ Problemas encontrados al realizar el trabajo práctico:
 Conclusión:
 
    Este trabajo práctico es una buena práctica para practicar y aprender la sintáxis del lenguaje C y sus particularidades, entender como funcionan los semáforos y como aplicarlos en lenguaje C a partir de una base en pseudocódigo. También es una forma útil de habituarse a buscar métodos y formas de solucionar problemas en cualquier lenguaje de programación.
+   
+Bibliografía:
+
+*  Dennis Ritchie & Brian Kernighan (1978)._El lenguaje de programación C_. Editorial	Pearson Educación.
+*  Carlospes: http://www.carlospes.com/curso_de_lenguaje_c/01_08_03_la_funcion_strcat.php
+*  Codigo Fuente: http://codigomaldito.blogspot.com/2005/11/funciones-de-cstring-strcpy-y-strncpy.html
+*  Parzibyte: https://parzibyte.me/blog/2019/10/16/escribir-archivo-con-c-usando-fprintf/, 
+              https://parzibyte.me/blog/2018/11/13/separar-cadena-delimitadores-c-strtok/
+*  StackOverflow: https://stackoverflow.com/questions/37050062/warning-assignment-makes-pointer-from-integer-without-a-cast-wint-conversion
+*  Wikibooks: https://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C/Manejo_de_archivos
+
+
